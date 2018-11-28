@@ -10,12 +10,17 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
+        android:clickable="true"
+        android:onClick="floatingButtonClick"
         app:srcCompat="@android:drawable/btn_plus" />
 
     <ListView
+        android:id="@+id/entryList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:listSelector="#00f5c0"
+        android:divider="#7acea0"
+        android:dividerHeight="1dp"/>
 </android.support.design.widget.CoordinatorLayout>
