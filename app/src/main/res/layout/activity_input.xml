@@ -8,7 +8,7 @@
     tools:context=".DetailActivity">
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="25"
-            android:onClick="moodClicked"
+            android:onClick="addEntry"
             app:srcCompat="@mipmap/ic_launcher_round" />
 
         <ImageButton
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="25"
-            android:onClick="moodClicked"
+            android:onClick="addEntry"
 
             app:srcCompat="@mipmap/ic_launcher_round" />
 
@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="25"
-            android:onClick="moodClicked"
+            android:onClick="addEntry"
 
             app:srcCompat="@mipmap/ic_launcher_round" />
 
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="25"
-            android:onClick="moodClicked"
+            android:onClick="addEntry"
 
             app:srcCompat="@mipmap/ic_launcher_round" />
     </LinearLayout>

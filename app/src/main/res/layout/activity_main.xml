@@ -20,7 +20,7 @@
         android:id="@+id/entryList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:listSelector="#00f5c0"
         android:divider="#7acea0"
-        android:dividerHeight="1dp"/>
+        android:dividerHeight="1dp"
+        android:listSelector="#00f5c0" />
 </android.support.design.widget.CoordinatorLayout>

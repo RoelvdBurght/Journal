@@ -20,8 +20,6 @@ public class JournalListAdapter extends ArrayAdapter<JournalEntry> {
     public JournalListAdapter(Context context, int resource, ArrayList<JournalEntry> entryList) {
         super(context, resource, entryList);
         this.entryList = entryList;
-
-
     }
 
     @Override
@@ -44,5 +42,4 @@ public class JournalListAdapter extends ArrayAdapter<JournalEntry> {
 
         return convertView;
     }
-
 }

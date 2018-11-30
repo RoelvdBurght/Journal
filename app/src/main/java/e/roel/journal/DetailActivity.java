@@ -12,6 +12,7 @@ public class DetailActivity extends AppCompatActivity {
     String tag = "DetailActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(tag, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
