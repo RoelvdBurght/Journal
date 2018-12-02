@@ -32,8 +32,6 @@ public class EntryDatabase extends SQLiteOpenHelper {
     // Constructor
     private EntryDatabase(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
-        Log.d(tag, "constructor");
-
     }
 
     // Returns the database instance
@@ -85,19 +83,19 @@ public class EntryDatabase extends SQLiteOpenHelper {
 
     public void insert(JournalEntry je) {
         SQLiteDatabase db = getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null); // kan weg?
         ContentValues cv = new ContentValues();
         cv.put(TITLE, je.getTitle());
         cv.put(CONTENT, je.getContent());
         cv.put(MOOD, je.getMood());
-        cv.put(TIMESTAMP, je.getTimestamp());
+        cv.put(TIMESTAMP, je.getDate());
 
         db.insert(TABLE_NAME, null, cv);
     }
 
     public void delete(long id) {
         SQLiteDatabase db = getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null); // kan weg?
         db.delete(TABLE_NAME, ID + " = " + id, null);
     }
 }

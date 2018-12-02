@@ -8,13 +8,13 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
         android:clickable="true"
         android:onClick="floatingButtonClick"
-        app:srcCompat="@android:drawable/btn_plus" />
+        android:src="@drawable/ic_add_white_24dp"/>
 
     <ListView
         android:id="@+id/entryList"
