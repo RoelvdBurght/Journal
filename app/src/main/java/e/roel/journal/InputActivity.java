@@ -16,31 +16,69 @@ public class InputActivity extends AppCompatActivity {
 
     // for debugging purposes
     String tag = "InputActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
+        // Find relevant views
+        TextView dateView = findViewById(R.id.date);
+        TextView timeView = findViewById(R.id.time);
+
         // Set the date in the date textview to today
         Date dNow = new Date();
         SimpleDateFormat ft = new SimpleDateFormat("dd-MM-yyyy",  Locale.getDefault());
-        TextView dateView = findViewById(R.id.date);
         dateView.setText(ft.format(dNow));
-        TextView timeView = findViewById(R.id.time);
         ft = new SimpleDateFormat("H:m", Locale.getDefault());
         timeView.setText(ft.format(dNow));
 
 
     }
-    // Change activitys and save data to database on click of a mood button
-    public void addEntry(View view) {
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
         // Find relevant views
         TextView titleView = findViewById(R.id.title);
         TextView dateView = findViewById(R.id.date);
         TextView timeView = findViewById(R.id.time);
         TextView contentView = findViewById(R.id.content);
+
+        outState.putString("title", titleView.getText().toString());
+        outState.putString("date", dateView.getText().toString());
+        outState.putString("time", timeView.getText().toString());
+        outState.putString("content", contentView.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Find relevant views
+        TextView titleView = findViewById(R.id.title);
+        TextView dateView = findViewById(R.id.date);
+        TextView timeView = findViewById(R.id.time);
+        TextView contentView = findViewById(R.id.content);
+
+        titleView.setText(savedInstanceState.getString("title"));
+        dateView.setText(savedInstanceState.getString("date"));
+        timeView.setText(savedInstanceState.getString("time"));
+        contentView.setText(savedInstanceState.getString("content"));
+
+    }
+
+    // Change activitys and save data to database on click of a mood button
+    public void addEntry(View view) {
+
         String buttonName = getResources().getResourceEntryName(view.getId());
+
+        // Find relevant views
+        TextView titleView = findViewById(R.id.title);
+        TextView dateView = findViewById(R.id.date);
+        TextView timeView = findViewById(R.id.time);
+        TextView contentView = findViewById(R.id.content);
 
         // Find values in views
         String title = titleView.getText().toString();
