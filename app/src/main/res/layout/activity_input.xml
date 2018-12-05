@@ -42,6 +42,15 @@
         android:hint="Your new journal entry"
         android:inputType="textCapSentences|textMultiLine"/>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a emoji describing your mood to finish the journal"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:fontFamily="cursive"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
