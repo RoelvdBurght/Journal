@@ -3,7 +3,7 @@ Extra features zijn nu een contextmenu (zie onderste screenshot), waarmee je kan
 je een entry wilt verwijderen of lezen.
 
 
-![](screen1.png width=25 height=100)
+![Homescreen](screen1.png width="25" height="100")
 ![Inpuscreen](screen2.png)
 ![Lookscreen](screen3.png)
 ![Contextmenu](screen4.png)
